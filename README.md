@@ -1,3 +1,40 @@
+# goodtransistorstuff
+Testing out a Static Site Generator + Transistor API based podcast network site.
+
+## Basics
+
+I've got a [podcast network](https://goodstuff.network/) that's currently hanging on with [Jekyll](https://jekyllrb.com/) as the CMS + [Transistor](https://transistor.fm/?via=chris) as the podcast host for the MP3 files, and it all gets built out on to [Netlify](https://www.netlify.com). We currently duplicate our process of creating episodes in Jekyll and also in Transistor.
+
+Transistor recently [opened up their API](https://developers.transistor.fm/?via=chris) which got me thinking we should be able to just enter the data in Transistor and then pull that into something like Eleventy or Nextjs automagically.
+
+## Details
+
+Current site: https://goodstuff.network/
+Repo for current site: https://github.com/GoodStuff-Fm/goodstuff
+
+Shows lists current and archived podcasts: https://goodstuff.network/shows/
+
+Shows have a show page: https://goodstuff.network/25c/
+
+Each show has episode pages for each episode in the show: https://goodstuff.network/25c/22
+
+Other pages exist but aren't utilized a lot: https://goodstuff.network/about/
+
+Redirects exist i.e. https://goodstuff.network/twitch
+
+### Ideas from Discord Chats
+
+Cassidy:
+> I don't have as much experience with Eleventy, but in Next.js you can call the API and pull the episodes in the function getStaticProps and it can populate the whole site, and you can either trigger a new build whenever an episode comes up, or you can set up a web hook that listens for the feed. I can pretty much guarantee there's something similar in 11ty.
+
+Ben:
+> In Eleventy, you’d want to make any API calls you need in a global data file (https://www.11ty.dev/docs/data-global/), then use the data in your templates directly or use Eleventy’s pagination feature to create pages from that data. I’m happy to help with that where I can.
+
+Ximena:
+> ...to test it out I would probs just do another test repo with like and 11ty template and just test if those particular features you want work. A separate repo as a proof of concept, and then if it works you can branch it and do the whole thing right.
+
+
+
 # Neat Starter
 
 Starter Template for **N**etlify CMS, **E**leventy, **A**lphine JS & **T**ailwind CSS
@@ -26,7 +63,7 @@ Detailed instructions are available in my blog. [Check it out](https://blog.surj
 ### 1\. Clone this Repository
 
 ```
-git clone https://github.com/surjithctly/neat-starter.git
+git clone https://github.com/iChris/goodtransistorstuff
 ```
 
 ### 2\. Navigate to the directory
