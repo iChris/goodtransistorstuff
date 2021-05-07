@@ -33,6 +33,21 @@ Ben:
 Ximena:
 > ...to test it out I would probs just do another test repo with like and 11ty template and just test if those particular features you want work. A separate repo as a proof of concept, and then if it works you can branch it and do the whole thing right.
 
+Andrew:
+> you would do it with a javascript data file (https://www.11ty.dev/docs/data-js/) where you would do something like. At about the 2:45 mark this guy does it here https://www.youtube.com/watch?v=ktEjaABp4aw. he just does it with axios instead of fetch. oh right, because it's node... you would need node-fetch or axios.
+
+```
+module.exports = async function() {
+  // do the "curl" here
+  const shows = await fetch("https://api.transistor.fm/v1/shows", { 
+    headers: {
+      "x-api-key": "YOUR_API_KEY"
+    }
+  }).then(response => response.json());
+
+  return shows;
+};
+```
 
 
 # Neat Starter
