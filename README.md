@@ -48,7 +48,8 @@ module.exports = async function() {
   return shows;
 };
 ```
-
+Justin:
+> You should check out [Adam Wathan's implementation here](https://github.com/adamwathan/fullstackradio.com/blob/master/pages/index.js#L7-L24). (He didn't use the API, just RSS feed)
 
 # Neat Starter
 
