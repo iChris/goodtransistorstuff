@@ -10,6 +10,11 @@ tags:
   - center
   - right
 ---
+
+{% for show in shows %}
+	{{ show.title }}<br>
+{% endfor %}
+
 # This is a Heading h1
 
 ## This is a Heading h2
