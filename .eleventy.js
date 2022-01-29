@@ -5,18 +5,6 @@ const htmlmin = require("html-minifier");
 
 const TransistorFmPlugin = require("@11ty/eleventy-data-transistor-fm");
 
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPlugin(TransistorFmPlugin, {
-    envApiKey: "TRANSISTOR_FM_API_KEY", // the name of the environment variable for the API key
-
-    envApiKeyRequired: false, // fail if the environment variable is missing?
-
-    data: "transistorfm.episodes", // where in Eleventy to store the return data
-  });
-};
-
-
-
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
@@ -30,6 +18,8 @@ module.exports = function (eleventyConfig) {
       "dd LLL yyyy"
     );
   });
+
+  
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
